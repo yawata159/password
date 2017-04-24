@@ -24,9 +24,7 @@ def isGoodPassword2(pw):
     if pw.lower() in words or pw == 'correcthorsebatterystaple':
         return 1
     rating += len(pw)*0.7
-    print rating
     rating -= numpy.std([uppers,lowers,nums,symbs])*0.2
-    print rating
     rating = int(round(min(10,max(1,rating))))
     return rating
 
